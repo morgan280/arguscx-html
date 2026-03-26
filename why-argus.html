@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Argus | ArgusCX</title>
+    <meta name="description" content="Why partner with argusCX? Human-agent teaming that delivers: clarity, accountability, continuous improvement, and innovation you can measure." />
+    <meta name="keywords" content="argusCX, why argus, partner, BPO, CX, human-agent teaming, benefits, innovation" />
+    <meta property="og:title" content="Why Argus | ArgusCX" />
+    <meta property="og:description" content="Why partner with argusCX? Human-agent teaming that delivers: clarity, accountability, continuous improvement, and innovation you can measure." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/why-argus.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Why Argus | ArgusCX" />
+    <meta name="twitter:description" content="Why partner with argusCX? Human-agent teaming that delivers: clarity, accountability, continuous improvement, and innovation you can measure." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/why-argus.html" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+    <link rel="stylesheet" href="/assets/animations.css">
+    <link rel="preload" as="image" href="/images/why-hero-bg.png">
+    
+    <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.reveal-hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+.hero-glow {
+  position: relative;
+  overflow: hidden;
+}
+.hero-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 191, 255, 0.1) 0%, rgba(242, 125, 47, 0.05) 40%, transparent 70%);
+  animation: glowPulse 6s ease-in-out infinite;
+  z-index: 0;
+}
+.hero-glow > :not(.hero-bg-image):not(.hero-overlay) { position: relative; z-index: 1; }
+@keyframes glowPulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  50% { transform: translateX(-50%) scale(1.15); opacity: 1; }
+}
+
+/* Why Argus hero background image (CSS only) */
+.hero-glow.bg-muted\/30.py-20.border-b {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow.bg-muted\/30.py-20.border-b::before {
+  /* Disable CSS background-image so we can use <img> instead. */
+  content: '';
+  opacity: 0 !important;
+  background: none !important;
+  animation: none !important;
+}
+
+.hero-glow.bg-muted\/30.py-20.border-b::after {
+  /* Disable CSS gradient overlay so we can use .hero-overlay instead. */
+  display: none !important;
+}
+
+.hero-glow.bg-muted\/30.py-20.border-b .container.mx-auto.px-4.text-center {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   ArgusCX Hero Background (img + overlay)
+   Fixes first-visit hero image loading.
+   ======================================== */
+.hero-section {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.55; /* Why Argus */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(11, 15, 26, 0.5) 0%, rgba(11, 15, 26, 0.95) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure app content stacks above the fixed static hero */
+#root { position: relative; z-index: 1; }
+
+/* Remove top padding gap between the sticky nav and the hero */
+#root > div > div.pt-20.pb-24 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = null;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+  }
+
+  const observed = new WeakSet();
+
+  function attachReveal(el) {
+    if (observed.has(el)) return;
+    observed.add(el);
+    if (observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
+  }
+
+  function scanReveals() {
+    document.querySelectorAll('.reveal').forEach(attachReveal);
+  }
+
+  scanReveals();
+  const root = document.getElementById('root');
+  if (root) {
+    new MutationObserver(scanReveals).observe(root, { childList: true, subtree: true });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }, 3000);
+});
+</script>
+    <script>
+(function() {
+  var id = "why-argus-testimonial-teaser";
+  function inject() {
+    if (document.getElementById(id)) return true;
+    var root = document.getElementById("root");
+    var footer = root && root.querySelector("footer");
+    if (!root) return false;
+
+    var section = document.createElement("section");
+    section.id = id;
+    section.className = "py-16 border-t border-white/10";
+    section.innerHTML = '\
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">\
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8">What Our Clients Say</h2>\
+        <div class="bg-white/5 border border-white/10 rounded-xl p-8 mb-8 relative">\
+          <svg class="w-10 h-10 text-cyan-500/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+          <p class="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">We reduced patient wait times by 60% while actually improving satisfaction scores. The AI handles scheduling and verification instantly, but when patients need empathy—a human is always there.</p>\
+          <div class="flex items-center justify-center gap-3">\
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold">MR</div>\
+            <div class="text-left">\
+              <div class="text-white font-medium">Michelle Rodriguez</div>\
+              <div class="text-gray-500 text-sm">VP Patient Experience, MedFirst Health Systems</div>\
+            </div>\
+          </div>\
+        </div>\
+        <a href="/about" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition">\
+          Read more client stories\
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>\
+        </a>\
+      </div>';
+
+    function findInnovationAnchor() {
+      var targets = ["Innovation you can measure", "Innovation You Can Measure"];
+      var headings = root.querySelectorAll("h1, h2, h3");
+      for (var i = 0; i < headings.length; i++) {
+        var h = headings[i];
+        if (!h || !h.textContent) continue;
+        var t = h.textContent.replace(/\s+/g, " ").trim();
+        if (!t) continue;
+        for (var j = 0; j < targets.length; j++) {
+          if (t.indexOf(targets[j]) !== -1) return h;
+        }
+      }
+      return null;
+    }
+
+    // Preferred placement: directly above "Innovation you can measure" section.
+    var anchor = findInnovationAnchor();
+    if (anchor) {
+      var wrapper = anchor.closest("section") || anchor.parentNode;
+      if (wrapper && wrapper.parentNode) {
+        wrapper.parentNode.insertBefore(section, wrapper);
+        return true;
+      }
+    }
+
+    // Fallback: insert before footer (previous behavior).
+    if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(section, footer);
+      return true;
+    }
+
+    return false;
+  }
+
+  if (inject()) return;
+  var rootEl = document.getElementById("root");
+  if (rootEl) {
+    var mo = new MutationObserver(function() { if (inject()) mo.disconnect(); });
+    mo.observe(rootEl, { childList: true, subtree: true });
+    setTimeout(function() { mo.disconnect(); }, 10000);
+  }
+})();
+    </script>
+    <script>
+(function () {
+  function scrollTopNow() {
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("pageshow", scrollTopNow);
+
+  var _pushState = history.pushState;
+  history.pushState = function () {
+    var r = _pushState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  var _replaceState = history.replaceState;
+  history.replaceState = function () {
+    var r = _replaceState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  window.addEventListener("popstate", scrollTopNow);
+})();
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-loaded');
+
+  const root = document.getElementById('root');
+  if (!root) return;
+
+  // Exclude nav/footer and the actual hero wrapper(s).
+  // Using closest() avoids timing issues during the first React render.
+  const isExcluded = (el) =>
+    !!el.closest('nav, footer, .hero-grid, .hero-glow, .hero-dots, .hero-subtle, .hero-section');
+
+  function ensureReveal(el, delayClass) {
+    if (!el || el.nodeType !== 1) return;
+    if (isExcluded(el)) return;
+    if (el.classList.contains('reveal')) return;
+    el.classList.add('reveal');
+    if (delayClass) el.classList.add(delayClass);
+  }
+
+  function tagEligible() {
+    root.querySelectorAll('h2, h3, blockquote').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section p, section ul, section ol').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('article, [class*="rounded-xl"], [class*="rounded-2xl"], [class*="rounded-lg"][class*="border"]').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section img, section svg').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section a, section button').forEach((el) => ensureReveal(el));
+
+    root.querySelectorAll('[class*="grid"]').forEach((grid) => {
+      if (isExcluded(grid)) return;
+      const kids = Array.from(grid.children).filter((k) => {
+        if (!k || k.nodeType !== 1) return false;
+        const cls = (k.getAttribute('class') || '');
+        return cls.includes('rounded') || cls.includes('border') || !!k.querySelector('[class*="rounded"]');
+      });
+      kids.slice(0, 4).forEach((card, idx) => {
+        const delay = idx === 0 ? null : `reveal-delay-${idx}`;
+        ensureReveal(card, delay);
+      });
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+
+  function observeReveals() {
+    root.querySelectorAll('.reveal').forEach((el) => {
+      if (el.dataset.revealObserved === '1') return;
+      el.dataset.revealObserved = '1';
+      observer.observe(el);
+    });
+  }
+
+  tagEligible();
+  observeReveals();
+
+  new MutationObserver(() => {
+    tagEligible();
+    observeReveals();
+  }).observe(root, { childList: true, subtree: true });
+});
+    </script>
+    <script>
+(function () {
+  function getRoot() {
+    return document.getElementById('root');
+  }
+
+  var pollTimer = null;
+  var pollStartedAt = null;
+  var observer = null;
+
+  function setupHero() {
+    var root = getRoot();
+    if (!root) return false;
+
+    var hero = root.querySelector('section.hero-glow');
+    if (!hero) return false;
+    if (hero.querySelector('.hero-bg-image')) return true;
+
+    hero.classList.add('hero-section');
+
+    var img = document.createElement('img');
+    img.className = 'hero-bg-image';
+    img.src = '/images/why-hero-bg.png';
+    img.alt = '';
+    img.loading = 'eager';
+    img.setAttribute('fetchpriority', 'high');
+
+    var overlay = document.createElement('div');
+    overlay.className = 'hero-overlay';
+
+    var frag = document.createDocumentFragment();
+    frag.appendChild(img);
+    frag.appendChild(overlay);
+    hero.insertBefore(frag, hero.firstChild);
+
+    var content =
+      hero.querySelector('.container.mx-auto.px-4.text-center') || hero.firstElementChild;
+    if (content) content.classList.add('hero-content');
+
+    return true;
+  }
+
+  function startPolling() {
+    if (pollTimer) return;
+    pollStartedAt = Date.now();
+    var maxMs = 20000;
+
+    function tick() {
+      if (setupHero()) {
+        clearInterval(pollTimer);
+        pollTimer = null;
+        return;
+      }
+      if (Date.now() - pollStartedAt > maxMs) {
+        clearInterval(pollTimer);
+        pollTimer = null;
+      }
+    }
+
+    tick();
+    pollTimer = setInterval(tick, 150);
+  }
+
+  function ensureObserver() {
+    if (observer) return;
+    var root = getRoot();
+    if (!root) return;
+
+    observer = new MutationObserver(function () {
+      if (setupHero()) {
+        if (observer) observer.disconnect();
+        observer = null;
+      }
+    });
+    observer.observe(root, { childList: true, subtree: true });
+  }
+
+  function start() {
+    ensureObserver();
+    startPolling();
+    setupHero();
+  }
+
+  document.addEventListener('DOMContentLoaded', start);
+  window.addEventListener('load', start);
+  window.addEventListener('pageshow', start);
+})();
+    </script>
+    <script>
+(function () {
+  var RELOAD_ROUTES = [
+    "/",
+    "/services",
+    "/about",
+    "/technology",
+    "/industries",
+    "/why",
+    "/why-argus",
+    "/contact",
+    "/get-started",
+    "/careers",
+    "/privacy",
+    "/terms",
+    "/thank-you",
+    "/experience-blue",
+    "/experience-red"
+  ];
+
+  function normalizePath(href) {
+    if (!href) return "";
+    var h = href.split("#")[0].split("?")[0];
+    h = h.replace(/\.html$/i, "");
+    h = h.replace(/\/+$/g, "");
+    return h === "" ? "/" : h;
+  }
+
+  function shouldForceFullReload(href) {
+    if (!href) return false;
+    var h = href.trim();
+    if (!h || h[0] === "#") return false;
+
+    // Ignore external links (http:, mailto:, etc.)
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(h)) return false;
+
+    // Support relative paths like "services.html"
+    if (h[0] !== "/") h = "/" + h;
+
+    var path = normalizePath(h);
+    return RELOAD_ROUTES.indexOf(path) !== -1;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      var a = target.closest("a[href]");
+      if (!a) return;
+
+      var href = a.getAttribute("href");
+      if (!shouldForceFullReload(href)) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = href;
+    },
+    true
+  );
+})();
+</script>
+  </body>
+</html>

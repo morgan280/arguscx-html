@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology | ArgusCX</title>
+    <meta name="description" content="argusCX technology: data and insights, CX transformation, and CX platform. AI, analytics, and human expertise for faster, smarter interactions." />
+    <meta name="keywords" content="argusCX, technology, data insights, CX platform, AI, analytics, automation, customer experience" />
+    <meta property="og:title" content="Technology | ArgusCX" />
+    <meta property="og:description" content="argusCX technology: data and insights, CX transformation, and CX platform. AI, analytics, and human expertise for faster, smarter interactions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/technology.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Technology | ArgusCX" />
+    <meta name="twitter:description" content="argusCX technology: data and insights, CX transformation, and CX platform. AI, analytics, and human expertise for faster, smarter interactions." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/technology.html" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+    <link rel="stylesheet" href="/assets/animations.css">
+    
+    <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.reveal-hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Remove top padding gap between sticky nav and hero (common wrapper). */
+#root > div > div.pt-20.pb-24 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = null;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+  }
+
+  const observed = new WeakSet();
+
+  function attachReveal(el) {
+    if (observed.has(el)) return;
+    observed.add(el);
+    if (observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
+  }
+
+  function scanReveals() {
+    document.querySelectorAll('.reveal').forEach(attachReveal);
+  }
+
+  scanReveals();
+  const root = document.getElementById('root');
+  if (root) {
+    new MutationObserver(scanReveals).observe(root, { childList: true, subtree: true });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }, 3000);
+});
+</script>
+    <script>
+(function () {
+  var RELOAD_ROUTES = [
+    "/",
+    "/services",
+    "/about",
+    "/technology",
+    "/industries",
+    "/why",
+    "/why-argus",
+    "/contact",
+    "/get-started",
+    "/careers",
+    "/privacy",
+    "/terms",
+    "/thank-you",
+    "/experience-blue",
+    "/experience-red"
+  ];
+
+  function normalizePath(href) {
+    if (!href) return "";
+    var h = href.split("#")[0].split("?")[0];
+    h = h.replace(/\.html$/i, "");
+    h = h.replace(/\/+$/g, "");
+    return h === "" ? "/" : h;
+  }
+
+  function shouldForceFullReload(href) {
+    if (!href) return false;
+    var h = href.trim();
+    if (!h || h[0] === "#") return false;
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(h)) return false;
+    if (h[0] !== "/") h = "/" + h;
+    var path = normalizePath(h);
+    return RELOAD_ROUTES.indexOf(path) !== -1;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      var a = target.closest("a[href]");
+      if (!a) return;
+
+      var href = a.getAttribute("href");
+      if (!shouldForceFullReload(href)) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = href;
+    },
+    true
+  );
+})();
+</script>
+  </body>
+</html>

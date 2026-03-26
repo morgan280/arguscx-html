@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | ArgusCX</title>
+    <meta name="description" content="Learn about argusCX: BPO and customer experience reimagined. Human-agent teaming for contact center and back-office—mission, values, and why we exist." />
+    <meta name="keywords" content="argusCX, about, BPO, customer experience, mission, company story, contact center, back-office" />
+    <meta property="og:title" content="About Us | ArgusCX" />
+    <meta property="og:description" content="Learn about argusCX: BPO and customer experience reimagined. Human-agent teaming for contact center and back-office—mission, values, and why we exist." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/about.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | ArgusCX" />
+    <meta name="twitter:description" content="Learn about argusCX: BPO and customer experience reimagined. Human-agent teaming for contact center and back-office—mission, values, and why we exist." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/about.html" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+    <link rel="preload" as="image" href="/images/about-hero-bg.png">
+    
+    <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.reveal-hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+.hero-subtle {
+  position: relative;
+  overflow: hidden;
+}
+.hero-subtle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, transparent 40%, rgba(242, 125, 47, 0.03) 100%);
+  animation: subtleShift 10s ease-in-out infinite;
+  z-index: 0;
+}
+.hero-subtle > * { position: relative; z-index: 1; }
+@keyframes subtleShift {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* ========================================
+   ArgusCX About Hero Background (img + overlay)
+   Restores first-visit hero image loading.
+   ======================================== */
+.hero-subtle::before {
+  /* We'll render the background image via <img.hero-bg-image> instead. */
+  opacity: 0 !important;
+  background: none !important;
+  animation: none !important;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.55; /* About */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(11, 15, 26, 0.5) 0%, rgba(11, 15, 26, 0.95) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure app content stacks above the fixed hero backgrounds. */
+#root { position: relative; z-index: 1; }
+
+/* Remove top padding gap between sticky nav and hero (common wrapper). */
+#root > div > div.pt-20.pb-24 {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+</style>
+  </head>
+  <body>
+    <h1 class="sr-only">About argusCX</h1>
+    <div id="root"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = null;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+  }
+
+  const observed = new WeakSet();
+
+  function attachReveal(el) {
+    if (observed.has(el)) return;
+    observed.add(el);
+    if (observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
+  }
+
+  function scanReveals() {
+    document.querySelectorAll('.reveal').forEach(attachReveal);
+  }
+
+  scanReveals();
+  const root = document.getElementById('root');
+  if (root) {
+    new MutationObserver(scanReveals).observe(root, { childList: true, subtree: true });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }, 3000);
+});
+</script>
+    <script>
+(function () {
+  function getRoot() {
+    return document.getElementById('root');
+  }
+
+  var pollTimer = null;
+  var pollStartedAt = null;
+  var observer = null;
+
+  function setupHero() {
+    var root = getRoot();
+    if (!root) return false;
+
+    // About page hero wrapper uses `hero-subtle`.
+    var hero = root.querySelector('section.hero-subtle');
+    if (!hero) return false;
+    if (hero.querySelector('.hero-bg-image')) return true;
+
+    hero.classList.add('hero-section');
+
+    var img = document.createElement('img');
+    img.className = 'hero-bg-image';
+    img.src = '/images/about-hero-bg.png';
+    img.alt = '';
+    img.loading = 'eager';
+    img.setAttribute('fetchpriority', 'high');
+
+    var overlay = document.createElement('div');
+    overlay.className = 'hero-overlay';
+
+    var frag = document.createDocumentFragment();
+    frag.appendChild(img);
+    frag.appendChild(overlay);
+    hero.insertBefore(frag, hero.firstChild);
+
+    var content =
+      hero.querySelector('.container.mx-auto.px-4.text-center') || hero.firstElementChild;
+    if (content) content.classList.add('hero-content');
+
+    return true;
+  }
+
+  function startPolling() {
+    if (pollTimer) return;
+    pollStartedAt = Date.now();
+    var maxMs = 20000;
+
+    function tick() {
+      if (setupHero()) {
+        clearInterval(pollTimer);
+        pollTimer = null;
+        return;
+      }
+      if (Date.now() - pollStartedAt > maxMs) {
+        clearInterval(pollTimer);
+        pollTimer = null;
+      }
+    }
+
+    tick();
+    pollTimer = setInterval(tick, 150);
+  }
+
+  function ensureObserver() {
+    if (observer) return;
+    var root = getRoot();
+    if (!root) return;
+
+    observer = new MutationObserver(function () {
+      if (setupHero()) {
+        if (observer) observer.disconnect();
+        observer = null;
+      }
+    });
+    observer.observe(root, { childList: true, subtree: true });
+  }
+
+  function start() {
+    ensureObserver();
+    startPolling();
+    setupHero();
+  }
+
+  document.addEventListener('DOMContentLoaded', start);
+  window.addEventListener('load', start);
+  window.addEventListener('pageshow', start);
+})();
+</script>
+    <script>
+(function() {
+  var id = "about-testimonials";
+  function inject() {
+    if (document.getElementById(id)) return true;
+    var root = document.getElementById("root");
+    var footer = root && root.querySelector("footer");
+    if (!footer || !footer.parentNode) return false;
+
+    var section = document.createElement("section");
+    section.id = id;
+    section.className = "py-12 border-t border-white/10";
+    section.innerHTML = '\
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">\
+        <div class="text-center mb-12">\
+          <span class="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">Client Success</span>\
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by Operations Leaders</h2>\
+          <p class="text-gray-400 max-w-2xl mx-auto">See how companies transform customer experience with human-agent teaming.</p>\
+        </div>\
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-center">\
+          <div><div class="text-4xl font-bold text-cyan-400">50K+</div><div class="text-sm text-gray-500 mt-1">Monthly Interactions</div></div>\
+          <div><div class="text-4xl font-bold text-cyan-400">99%</div><div class="text-sm text-gray-500 mt-1">CSAT Score</div></div>\
+          <div><div class="text-4xl font-bold text-cyan-400">40%</div><div class="text-sm text-gray-500 mt-1">Cost Reduction</div></div>\
+          <div><div class="text-4xl font-bold text-cyan-400">24/7</div><div class="text-sm text-gray-500 mt-1">Coverage</div></div>\
+        </div>\
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">We reduced patient wait times by 60% while improving satisfaction. AI handles scheduling instantly, humans handle empathy.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">MR</div>\
+              <div><div class="text-white text-sm font-medium">Michelle Rodriguez</div><div class="text-gray-500 text-xs">VP Patient Experience, MedFirst</div></div>\
+            </div>\
+          </div>\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">Compliance was our biggest concern. AI handles KYC and validation, humans review flags. Processing time down 70%.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">JK</div>\
+              <div><div class="text-white text-sm font-medium">James Kowalski</div><div class="text-gray-500 text-xs">COO, Meridian Financial</div></div>\
+            </div>\
+          </div>\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">Black Friday chaos is gone. AI handles 80% of orders and returns. Human agents focus on complex cases.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">SL</div>\
+              <div><div class="text-white text-sm font-medium">Sarah Lin</div><div class="text-gray-500 text-xs">Director of CX, Velocity Commerce</div></div>\
+            </div>\
+          </div>\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">Our team was drowning in password resets. ArgusCX automated routine stuff. NPS went from 32 to 67 in six months.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">DM</div>\
+              <div><div class="text-white text-sm font-medium">David Martinez</div><div class="text-gray-500 text-xs">Head of CS, CloudStack Pro</div></div>\
+            </div>\
+          </div>\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">Claims intake went from 45 minutes to under 5. AI gathers info, adjusters help people through difficult situations.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">AP</div>\
+              <div><div class="text-white text-sm font-medium">Amanda Patterson</div><div class="text-gray-500 text-xs">SVP Claims, Sentinel Insurance</div></div>\
+            </div>\
+          </div>\
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">\
+            <svg class="w-8 h-8 text-cyan-500/30 mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>\
+            <p class="text-gray-300 text-sm mb-4">When flights get cancelled, emotions run high. AI handles rebooking instantly. Humans are ready for those who need to talk.</p>\
+            <div class="flex items-center gap-3">\
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-orange-500 flex items-center justify-center text-white font-semibold text-sm">RH</div>\
+              <div><div class="text-white text-sm font-medium">Robert Hughes</div><div class="text-gray-500 text-xs">VP Guest Services, Horizon Travel</div></div>\
+            </div>\
+          </div>\
+        </div>\
+      </div>';
+
+    function findCtaTarget() {
+      // Prefer the CTA section containing the "Book a Strategy Call" button/link.
+      var ctaText = "Book a Strategy Call";
+      var candidates = root.querySelectorAll("a, button");
+      for (var i = 0; i < candidates.length; i++) {
+        var el = candidates[i];
+        if (!el || !el.textContent) continue;
+
+        // Avoid matching nav/footer links.
+        if (el.closest && el.closest("nav, footer")) continue;
+
+        var t = el.textContent.replace(/\s+/g, " ").trim();
+        if (!t) continue;
+
+        if (t.indexOf(ctaText) !== -1) {
+          var section = el.closest("section");
+          return section || el;
+        }
+      }
+      return null;
+    }
+
+    var ctaTarget = findCtaTarget();
+    if (ctaTarget && ctaTarget.parentNode) {
+      ctaTarget.parentNode.insertBefore(section, ctaTarget);
+      return true;
+    }
+
+    // Fallback (timing mismatch): insert right before the footer.
+    footer.parentNode.insertBefore(section, footer);
+    return true;
+  }
+
+  if (inject()) return;
+  var rootEl = document.getElementById("root");
+  if (rootEl) {
+    var mo = new MutationObserver(function() { if (inject()) mo.disconnect(); });
+    mo.observe(rootEl, { childList: true, subtree: true });
+    setTimeout(function() { mo.disconnect(); }, 10000);
+  }
+})();
+</script>
+  </body>
+</html>

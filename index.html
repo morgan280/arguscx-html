@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | ArgusCX</title>
+    <meta name="description" content="ArgusCX: AI + human expertise for BPO and customer experience. Human-agent teaming for contact center and back-office—faster resolution, 24/7 coverage." />
+    <meta name="keywords" content="argusCX, BPO, customer experience, CX, human-agent teaming, AI contact center, back-office support, customer support outsourcing, business process outsourcing" />
+    <meta property="og:title" content="Home | ArgusCX" />
+    <meta property="og:description" content="ArgusCX combines AI and human expertise for BPO and customer experience. Human-agent teaming for contact center and back-office." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Home | ArgusCX" />
+    <meta name="twitter:description" content="ArgusCX combines AI and human expertise for BPO and customer experience. Human-agent teaming for contact center and back-office." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Organization","name":"argusCX","url":"https://arguscx.com","logo":"https://arguscx.com/images/arguscx-logo-transparent.png","description":"AI-powered customer experience and human-agent teaming solutions","sameAs":[]}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+  </head>
+  <body>
+    <h1 class="sr-only">argusCX — The Unified Operating System for Work</h1>
+    <div id="root"></div>
+    <script>
+(function () {
+  // If the server ever serves index.html for a "*.html" URL (cache/rewrite edge-case),
+  // normalize to the clean route so the correct static shell rewrite can apply.
+  // Example: /services.html -> /services
+  var p = window.location && window.location.pathname;
+  if (p && p !== "/index.html" && /\.html$/i.test(p)) {
+    window.location.replace(p.replace(/\.html$/i, ""));
+  }
+})();
+</script>
+    <script>
+document.addEventListener("click", function(e) {
+  var el = e.target.closest("div, a, button");
+  if (!el) return;
+  var text = el.textContent.trim();
+  if (text === "ENTER SYSTEM") {
+    e.preventDefault();
+    window.location.href = "/experience-blue.html";
+  }
+  if (text === "CONNECT NOW") {
+    e.preventDefault();
+    window.location.href = "/experience-red.html";
+  }
+});
+</script>
+    <script>
+(function () {
+  var RELOAD_ROUTES = [
+    "/",
+    "/services",
+    "/about",
+    "/technology",
+    "/industries",
+    "/why",
+    "/why-argus",
+    "/contact",
+    "/get-started",
+    "/careers",
+    "/privacy",
+    "/terms",
+    "/thank-you",
+    "/experience-blue",
+    "/experience-red"
+  ];
+
+  function normalizePath(href) {
+    if (!href) return "";
+    var h = href.split("#")[0].split("?")[0];
+    h = h.replace(/\.html$/i, "");
+    h = h.replace(/\/+$/g, "");
+    return h === "" ? "/" : h;
+  }
+
+  function shouldForceFullReload(href) {
+    if (!href) return false;
+    var h = href.trim();
+    if (!h || h[0] === "#") return false;
+
+    // Ignore external links (http:, mailto:, etc.)
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(h)) return false;
+
+    // Support relative paths like "services.html"
+    if (h[0] !== "/") h = "/" + h;
+
+    var path = normalizePath(h);
+    return RELOAD_ROUTES.indexOf(path) !== -1;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      var a = target.closest("a[href]");
+      if (!a) return;
+
+      var href = a.getAttribute("href");
+      if (!shouldForceFullReload(href)) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = href;
+    },
+    true
+  );
+})();
+</script>
+    <script>
+(function () {
+  function scrollTopNow() {
+    window.scrollTo(0, 0);
+  }
+
+  // Handles back/forward cache restores
+  window.addEventListener("pageshow", scrollTopNow);
+
+  // Handles SPA route changes
+  var _pushState = history.pushState;
+  history.pushState = function () {
+    var r = _pushState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  var _replaceState = history.replaceState;
+  history.replaceState = function () {
+    var r = _replaceState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  // Handles back/forward navigation
+  window.addEventListener("popstate", scrollTopNow);
+})();
+    </script>
+  </body>
+</html>

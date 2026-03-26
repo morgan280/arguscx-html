@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Strategy Call | ArgusCX</title>
+    <meta name="description" content="Get started with argusCX. Tell us about your needs and we'll reach out to build your hybrid AI + human team." />
+    <meta name="keywords" content="argusCX, get started, BPO, customer experience, contact, signup" />
+    <meta property="og:title" content="Book a Strategy Call | ArgusCX" />
+    <meta property="og:description" content="Get started with argusCX. Tell us about your needs and we'll reach out to build your hybrid AI + human team." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/get-started.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Book a Strategy Call | ArgusCX" />
+    <meta name="twitter:description" content="Get started with argusCX. Tell us about your needs and we'll reach out to build your hybrid AI + human team." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/get-started.html" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+    <link rel="stylesheet" href="/assets/animations.css">
+    
+    <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.reveal-hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* Get Started: add breathing room under sticky nav */
+#root > div > div.pt-20.pb-24 {
+  padding-top: 4.5rem !important;
+}
+</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = null;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+  }
+
+  const observed = new WeakSet();
+
+  function attachReveal(el) {
+    if (observed.has(el)) return;
+    observed.add(el);
+    if (observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
+  }
+
+  function scanReveals() {
+    document.querySelectorAll('.reveal').forEach(attachReveal);
+  }
+
+  scanReveals();
+  const root = document.getElementById('root');
+  if (root) {
+    new MutationObserver(scanReveals).observe(root, { childList: true, subtree: true });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }, 3000);
+});
+</script>
+    <script>
+(function() {
+  function fixForm() {
+    var form = document.querySelector('form');
+    if (!form) return false;
+
+    // Set Formspree action
+    form.action = 'https://formspree.io/f/maqlwppj';
+    form.method = 'POST';
+
+    // Add name attributes
+    var firstName = form.querySelector('#first-name');
+    var lastName = form.querySelector('#last-name');
+    var email = form.querySelector('#email');
+    var company = form.querySelector('#company');
+    var message = form.querySelector('#message');
+
+    if (firstName) firstName.name = 'first-name';
+    if (lastName) lastName.name = 'last-name';
+    if (email) email.name = 'email';
+    if (company) company.name = 'company';
+    if (message) message.name = 'message';
+
+    // Add hidden fields
+    if (!form.querySelector('[name="_gotcha"]')) {
+      var honeypot = document.createElement('input');
+      honeypot.type = 'text';
+      honeypot.name = '_gotcha';
+      honeypot.style.display = 'none';
+      form.appendChild(honeypot);
+    }
+
+    if (!form.querySelector('[name="_subject"]')) {
+      var subject = document.createElement('input');
+      subject.type = 'hidden';
+      subject.name = '_subject';
+      subject.value = 'Get Started Request - ArgusCX';
+      form.appendChild(subject);
+    }
+
+    return true;
+  }
+
+  if (fixForm()) return;
+  var root = document.getElementById('root');
+  if (root) {
+    var mo = new MutationObserver(function() { if (fixForm()) mo.disconnect(); });
+    mo.observe(root, { childList: true, subtree: true });
+    setTimeout(function() { mo.disconnect(); }, 10000);
+  }
+})();
+    </script>
+    <script>
+(function () {
+  // Force Formspree POST even if React intercepts submit.
+  function ensureFormFields(form) {
+    if (!form) return;
+
+    // Ensure action/method are correct at submit time.
+    form.action = "https://formspree.io/f/maqlwppj";
+    form.method = "POST";
+
+    function setName(sel, name) {
+      var el = form.querySelector(sel);
+      if (el && !el.name) el.name = name;
+      return el || null;
+    }
+
+    var firstName =
+      setName("#first-name", "first-name") ||
+      setName('input[autocomplete="given-name"]', "first-name");
+    var lastName =
+      setName("#last-name", "last-name") ||
+      setName('input[autocomplete="family-name"]', "last-name");
+    var email =
+      setName("#email", "email") ||
+      setName('input[type="email"]', "email");
+    var company =
+      setName("#company", "company") ||
+      setName('input[autocomplete="organization"]', "company");
+    var message =
+      setName("#message", "message") ||
+      setName("textarea", "message");
+
+    if (!form.querySelector('[name="_gotcha"]')) {
+      var honeypot = document.createElement("input");
+      honeypot.type = "text";
+      honeypot.name = "_gotcha";
+      honeypot.style.display = "none";
+      form.appendChild(honeypot);
+    }
+
+    if (!form.querySelector('[name="_subject"]')) {
+      var subject = document.createElement("input");
+      subject.type = "hidden";
+      subject.name = "_subject";
+      subject.value = "Get Started Request - ArgusCX";
+      form.appendChild(subject);
+    }
+
+    if (email && email.value && !form.querySelector('[name="_replyto"]')) {
+      var replyTo = document.createElement("input");
+      replyTo.type = "hidden";
+      replyTo.name = "_replyto";
+      replyTo.value = email.value;
+      form.appendChild(replyTo);
+    }
+  }
+
+  function bind() {
+    var form = document.querySelector("form");
+    if (!form) return false;
+    if (form.dataset.formspreeBound === "1") return true;
+    form.dataset.formspreeBound = "1";
+
+    form.addEventListener(
+      "submit",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var submitBtn = form.querySelector('[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        ensureFormFields(form);
+        var fd = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: fd,
+          headers: { Accept: "application/json" },
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error("Formspree error");
+            alert("Thanks! Your request has been sent.");
+            form.reset();
+          })
+          .catch(function () {
+            alert("Sorry — something went wrong sending your request. Please try again.");
+          })
+          .finally(function () {
+            if (submitBtn) submitBtn.disabled = false;
+          });
+      },
+      true
+    );
+
+    return true;
+  }
+
+  if (bind()) return;
+  var root = document.getElementById("root");
+  if (root) {
+    var mo = new MutationObserver(function () {
+      if (bind()) mo.disconnect();
+    });
+    mo.observe(root, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 10000);
+  }
+})();
+</script>
+    <script>
+(function () {
+  // Get Started: ensure content isn't hugging fixed nav.
+  // This is intentionally robust to wrapper class changes.
+  var APPLIED_FLAG = "__getStartedTopPadApplied";
+
+  function applyPadding() {
+    if (window[APPLIED_FLAG]) return true;
+    var root = document.getElementById("root");
+    if (!root) return false;
+
+    var nav = root.querySelector("nav");
+    if (!nav) return false;
+
+    // Find first meaningful content block after nav.
+    var candidate =
+      (nav.nextElementSibling && nav.nextElementSibling.matches("main, section, div") && nav.nextElementSibling) ||
+      root.querySelector("main, section");
+
+    if (!candidate) return false;
+
+    // Only apply if it's actually tight (avoid double-padding).
+    var pt = 0;
+    try {
+      pt = parseFloat(getComputedStyle(candidate).paddingTop) || 0;
+    } catch (e) {}
+
+    if (pt < 40) {
+      candidate.style.paddingTop = "4.5rem";
+    }
+
+    window[APPLIED_FLAG] = true;
+    return true;
+  }
+
+  if (applyPadding()) return;
+  var rootEl = document.getElementById("root");
+  if (rootEl) {
+    var mo = new MutationObserver(function () {
+      if (applyPadding()) mo.disconnect();
+    });
+    mo.observe(rootEl, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 10000);
+  }
+})();
+</script>
+    <script>
+(function () {
+  function scrollTopNow() {
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("pageshow", scrollTopNow);
+
+  var _pushState = history.pushState;
+  history.pushState = function () {
+    var r = _pushState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  var _replaceState = history.replaceState;
+  history.replaceState = function () {
+    var r = _replaceState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  window.addEventListener("popstate", scrollTopNow);
+})();
+    </script>
+    <script>
+(function () {
+  var RELOAD_ROUTES = [
+    "/",
+    "/services",
+    "/about",
+    "/technology",
+    "/industries",
+    "/why",
+    "/why-argus",
+    "/contact",
+    "/get-started",
+    "/careers",
+    "/privacy",
+    "/terms",
+    "/thank-you",
+    "/experience-blue",
+    "/experience-red"
+  ];
+
+  function normalizePath(href) {
+    if (!href) return "";
+    var h = href.split("#")[0].split("?")[0];
+    h = h.replace(/\.html$/i, "");
+    h = h.replace(/\/+$/g, "");
+    return h === "" ? "/" : h;
+  }
+
+  function shouldForceFullReload(href) {
+    if (!href) return false;
+    var h = href.trim();
+    if (!h || h[0] === "#") return false;
+
+    // Ignore external links (http:, mailto:, etc.)
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(h)) return false;
+
+    // Support relative paths like "services.html"
+    if (h[0] !== "/") h = "/" + h;
+
+    var path = normalizePath(h);
+    return RELOAD_ROUTES.indexOf(path) !== -1;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      var a = target.closest("a[href]");
+      if (!a) return;
+
+      var href = a.getAttribute("href");
+      if (!shouldForceFullReload(href)) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = href;
+    },
+    true
+  );
+})();
+</script>
+  </body>
+</html>

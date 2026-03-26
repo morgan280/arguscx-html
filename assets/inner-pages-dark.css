@@ -1,0 +1,349 @@
+/**
+ * Dark theme for inner marketing pages only.
+ * Scoped to .inner-dark-root (set by inner HTML shells + route sync in bundle).
+ * Does not apply to homepage or /experience-blue /experience-red.
+ */
+
+.inner-dark-root,
+.inner-dark-root body {
+  background-color: #0b0f1a;
+  color-scheme: dark;
+}
+
+/* Design tokens (shadcn hsl triplets) */
+.inner-dark-root {
+  --background: 220 40% 7%;
+  --foreground: 210 40% 96%;
+  --card: 220 25% 11%;
+  --card-foreground: 210 40% 96%;
+  --popover: 220 35% 8%;
+  --popover-foreground: 210 40% 96%;
+  --primary: 195 100% 50%;
+  --primary-foreground: 220 40% 7%;
+  --secondary: 24 88% 58%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 220 22% 14%;
+  --muted-foreground: 215 18% 72%;
+  --accent: 220 22% 16%;
+  --accent-foreground: 210 40% 96%;
+  --destructive: 0 62.8% 40%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 220 16% 18%;
+  --input: 220 16% 16%;
+  --ring: 195 100% 50%;
+  --radius: 0.75rem;
+}
+
+/* Nav */
+.inner-dark-root nav.sticky.top-0 {
+  background-color: rgba(11, 15, 26, 0.9) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.inner-dark-root nav.sticky .supports-\[backdrop-filter\]\:bg-background\/60 {
+  background-color: transparent !important;
+}
+
+.inner-dark-root nav a.text-sm.font-medium {
+  color: #c8d0dc !important;
+}
+
+.inner-dark-root nav a.text-sm.font-medium.text-primary,
+.inner-dark-root nav a.text-primary {
+  color: #00bfff !important;
+}
+
+.inner-dark-root nav a.block.text-lg.font-medium {
+  color: #c8d0dc !important;
+}
+
+.inner-dark-root nav .bg-primary.hover\:bg-primary\/90.text-primary-foreground,
+.inner-dark-root nav .w-full.bg-primary.rounded-full {
+  background: linear-gradient(135deg, #f27d2f, #00bfff) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.inner-dark-root nav .md\:hidden.absolute.top-16 {
+  background-color: rgba(11, 15, 26, 0.98) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Hero strips */
+.inner-dark-root .bg-muted\/30 {
+  background-color: #0b0f1a !important;
+}
+
+.inner-dark-root section.border-b.bg-muted\/30 {
+  border-bottom-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Hero headings & subtitles */
+.inner-dark-root section .text-4xl.font-heading,
+.inner-dark-root section .text-5xl.font-heading,
+.inner-dark-root section h1.text-4xl,
+.inner-dark-root section h2.text-4xl {
+  color: #f0f4f8 !important;
+}
+
+.inner-dark-root section .text-xl.text-muted-foreground,
+.inner-dark-root section p.text-muted-foreground.max-w-3xl,
+.inner-dark-root section p.text-muted-foreground.max-w-2xl {
+  color: rgba(200, 210, 225, 0.7) !important;
+}
+
+/* Badge / pill labels (Ri badge + similar) */
+.inner-dark-root .border-primary\/20.bg-primary\/10.text-primary,
+.inner-dark-root .bg-primary\/10.text-primary,
+.inner-dark-root span.rounded-full.bg-primary\/10.text-primary {
+  background-color: rgba(0, 191, 255, 0.1) !important;
+  border: 1px solid rgba(0, 191, 255, 0.3) !important;
+  color: #00bfff !important;
+}
+
+.inner-dark-root span.rounded-full.bg-secondary\/10.text-secondary {
+  background-color: rgba(242, 125, 47, 0.1) !important;
+  border: 1px solid rgba(242, 125, 47, 0.3) !important;
+  color: #f27d2f !important;
+}
+
+/* Cards */
+.inner-dark-root .bg-card,
+.inner-dark-root .border.bg-card {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px;
+}
+
+.inner-dark-root .rounded-xl.border.bg-card,
+.inner-dark-root .rounded-2xl.border.bg-card {
+  border-radius: 12px !important;
+}
+
+.inner-dark-root .bg-card .font-heading,
+.inner-dark-root .bg-card h3,
+.inner-dark-root [data-slot="card"] h3,
+.inner-dark-root .font-heading.text-3xl,
+.inner-dark-root h2.text-2xl,
+.inner-dark-root h2.text-3xl,
+.inner-dark-root h3.font-heading {
+  color: #f0f4f8 !important;
+}
+
+.inner-dark-root .bg-card .text-muted-foreground,
+.inner-dark-root .bg-card p,
+.inner-dark-root .text-sm.text-muted-foreground {
+  color: rgba(200, 210, 225, 0.65) !important;
+}
+
+.inner-dark-root p.text-muted-foreground,
+.inner-dark-root li .text-muted-foreground,
+.inner-dark-root ul li span.text-muted-foreground {
+  color: rgba(200, 210, 225, 0.7) !important;
+}
+
+.inner-dark-root h2.font-heading,
+.inner-dark-root h3.font-heading,
+.inner-dark-root h4 {
+  color: #f0f4f8 !important;
+}
+
+/* Card header muted areas */
+.inner-dark-root .bg-muted\/20 {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.inner-dark-root [data-slot="card-header"].bg-muted\/20 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Icon circles on cards — section category icons w-16 h-16 */
+.inner-dark-root .w-16.h-16.bg-primary\/10.text-primary {
+  background-color: rgba(0, 191, 255, 0.1) !important;
+  color: #00bfff !important;
+}
+
+.inner-dark-root .w-12.h-12.rounded-xl.bg-primary\/10 {
+  background-color: rgba(0, 191, 255, 0.1) !important;
+  color: #00bfff !important;
+}
+
+.inner-dark-root .bg-secondary\/10.text-secondary {
+  background-color: rgba(242, 125, 47, 0.1) !important;
+}
+
+/* Services AI / Human split */
+.inner-dark-root .bg-blue-50\/50 {
+  background-color: rgba(0, 191, 255, 0.05) !important;
+}
+
+.inner-dark-root .bg-orange-50\/50 {
+  background-color: rgba(242, 125, 47, 0.05) !important;
+}
+
+.inner-dark-root .text-blue-600,
+.inner-dark-root .dark\:text-blue-400 {
+  color: #00bfff !important;
+}
+
+.inner-dark-root .text-orange-600,
+.inner-dark-root .dark\:text-orange-400 {
+  color: #f27d2f !important;
+}
+
+/* Dividers */
+.inner-dark-root hr,
+.inner-dark-root .border-border,
+.inner-dark-root .border-t,
+.inner-dark-root .border-y,
+.inner-dark-root .divide-border > * {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.inner-dark-root .border-muted {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.inner-dark-root .bg-muted\/20.py-20.border-y {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Primary buttons */
+.inner-dark-root .bg-primary.text-primary-foreground {
+  background-color: #00bfff !important;
+  color: #0b0f1a !important;
+}
+
+.inner-dark-root .hover\:bg-primary\/90:hover {
+  background-color: #33ccff !important;
+  color: #0b0f1a !important;
+}
+
+.inner-dark-root nav .hover\:bg-primary\/90:hover {
+  background: linear-gradient(135deg, #f27d2f, #00bfff) !important;
+  color: #fff !important;
+  filter: brightness(1.06);
+}
+
+/* Outline / ghost buttons */
+.inner-dark-root button.border.border-input.bg-background,
+.inner-dark-root .border.border-input.bg-background {
+  border-color: rgba(0, 191, 255, 0.4) !important;
+  color: #00bfff !important;
+  background-color: transparent !important;
+}
+
+/* Services / bottom CTA strips use Tailwind bg-gradient-to-br from-cyan-950/40 to-blue-950/40 in the bundle */
+
+/* Footer */
+.inner-dark-root footer.bg-muted\/30 {
+  background-color: #060a12 !important;
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.inner-dark-root footer .text-muted-foreground,
+.inner-dark-root footer p.text-muted-foreground {
+  color: rgba(200, 210, 225, 0.5) !important;
+}
+
+.inner-dark-root footer h3.font-bold,
+.inner-dark-root footer .text-foreground {
+  color: #f0f4f8 !important;
+}
+
+.inner-dark-root footer a.text-muted-foreground,
+.inner-dark-root footer a.hover\:text-primary {
+  color: rgba(200, 210, 225, 0.6) !important;
+}
+
+.inner-dark-root footer a.hover\:text-primary:hover,
+.inner-dark-root footer a.text-primary {
+  color: #00bfff !important;
+}
+
+.inner-dark-root footer .mt-12.pt-8.border-t {
+  border-top-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.inner-dark-root footer a.hover\:text-foreground:hover {
+  color: #00bfff !important;
+}
+
+/* Technology page image frames */
+.inner-dark-root .rounded-2xl.overflow-hidden.border.bg-muted\/30.aspect-\[16\/10\] {
+  border-radius: 12px !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Forms — contact & get-started */
+.inner-dark-root [data-slot="card"],
+.inner-dark-root form.space-y-6 {
+  --card-bg: rgba(255, 255, 255, 0.04);
+}
+
+.inner-dark-root .max-w-lg [data-slot="card"],
+.inner-dark-root form .rounded-xl.border.bg-card,
+.inner-dark-root [class*="Card"] {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.inner-dark-root input.flex.h-9,
+.inner-dark-root textarea.flex.min-h-\[80px\] {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f0f4f8 !important;
+}
+
+.inner-dark-root input::placeholder,
+.inner-dark-root textarea::placeholder {
+  color: rgba(200, 210, 225, 0.4) !important;
+}
+
+.inner-dark-root label,
+.inner-dark-root .text-sm.font-medium.leading-none {
+  color: #c8d0dc !important;
+}
+
+.inner-dark-root form button[type="submit"],
+.inner-dark-root form .bg-primary[type="submit"] {
+  background-color: #00bfff !important;
+  color: #0b0f1a !important;
+}
+
+/* Why Argus — list checkmarks */
+.inner-dark-root .text-primary.shrink-0,
+.inner-dark-root li svg.text-primary {
+  color: #00bfff !important;
+}
+
+/* Layout shell */
+.inner-dark-root .min-h-screen.bg-background {
+  background-color: #0b0f1a !important;
+}
+
+/* Full-page muted wrappers (contact, get-started thank-you) */
+.inner-dark-root .min-h-screen.bg-muted\/30 {
+  background-color: #0b0f1a !important;
+}
+
+.inner-dark-root .text-foreground\/90 {
+  color: rgba(240, 244, 248, 0.92) !important;
+}
+
+.inner-dark-root textarea {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #f0f4f8 !important;
+}
+
+/* Outline / ghost buttons (shadcn) */
+.inner-dark-root button.border-input:not([class*="bg-primary"]):not([class*="bg-destructive"]) {
+  border-color: rgba(0, 191, 255, 0.4) !important;
+  color: #00bfff !important;
+  background-color: transparent !important;
+}

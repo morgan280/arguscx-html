@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | ArgusCX</title>
+    <meta name="description" content="Contact argusCX. Get in touch for BPO and customer experience solutions. We'll get back to you shortly." />
+    <meta name="keywords" content="argusCX, contact, get started, BPO, customer experience, support" />
+    <meta property="og:title" content="Contact | ArgusCX" />
+    <meta property="og:description" content="Contact argusCX. Get in touch for BPO and customer experience solutions. We'll get back to you shortly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <meta property="og:url" content="https://arguscx.com/contact.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact | ArgusCX" />
+    <meta name="twitter:description" content="Contact argusCX. Get in touch for BPO and customer experience solutions. We'll get back to you shortly." />
+    <meta name="twitter:image" content="https://arguscx.com/images/arguscx-logo-transparent.png" />
+    <link rel="canonical" href="https://arguscx.com/contact.html" />
+    <link rel="icon" href="/images/arguscx-logo-transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DuTVTINJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0_gEKePg.css">
+    <link rel="stylesheet" href="/assets/animations.css">
+    
+    <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.reveal-hero {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let observer = null;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+  }
+
+  const observed = new WeakSet();
+
+  function attachReveal(el) {
+    if (observed.has(el)) return;
+    observed.add(el);
+    if (observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add('visible');
+    }
+  }
+
+  function scanReveals() {
+    document.querySelectorAll('.reveal').forEach(attachReveal);
+  }
+
+  scanReveals();
+  const root = document.getElementById('root');
+  if (root) {
+    new MutationObserver(scanReveals).observe(root, { childList: true, subtree: true });
+  }
+
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+  }, 3000);
+});
+</script>
+    <script>
+(function() {
+  function fixForm() {
+    var form = document.querySelector('form');
+    if (!form) return false;
+
+    // Set Formspree action
+    form.action = 'https://formspree.io/f/maqlwppj';
+    form.method = 'POST';
+
+    // Add name attributes
+    var firstName = form.querySelector('#first-name');
+    var lastName = form.querySelector('#last-name');
+    var email = form.querySelector('#email');
+    var message = form.querySelector('#message');
+
+    if (firstName) firstName.name = 'first-name';
+    if (lastName) lastName.name = 'last-name';
+    if (email) email.name = 'email';
+    if (message) message.name = 'message';
+
+    // Add hidden fields if not already present
+    if (!form.querySelector('[name="_gotcha"]')) {
+      var honeypot = document.createElement('input');
+      honeypot.type = 'text';
+      honeypot.name = '_gotcha';
+      honeypot.style.display = 'none';
+      form.appendChild(honeypot);
+    }
+
+    if (!form.querySelector('[name="_subject"]')) {
+      var subject = document.createElement('input');
+      subject.type = 'hidden';
+      subject.name = '_subject';
+      subject.value = 'Contact Form - ArgusCX';
+      form.appendChild(subject);
+    }
+
+    return true;
+  }
+
+  if (fixForm()) return;
+  var root = document.getElementById('root');
+  if (root) {
+    var mo = new MutationObserver(function() { if (fixForm()) mo.disconnect(); });
+    mo.observe(root, { childList: true, subtree: true });
+    setTimeout(function() { mo.disconnect(); }, 10000);
+  }
+})();
+    </script>
+    <script>
+(function () {
+  // Force Formspree POST even if React intercepts submit.
+  function ensureFormFields(form) {
+    if (!form) return;
+
+    // Ensure action/method are correct at submit time.
+    form.action = "https://formspree.io/f/maqlwppj";
+    form.method = "POST";
+
+    function setName(sel, name) {
+      var el = form.querySelector(sel);
+      if (el && !el.name) el.name = name;
+      return el || null;
+    }
+
+    // Try ID-based first, then reasonable fallbacks.
+    var firstName =
+      setName("#first-name", "first-name") ||
+      setName('input[autocomplete="given-name"]', "first-name");
+    var lastName =
+      setName("#last-name", "last-name") ||
+      setName('input[autocomplete="family-name"]', "last-name");
+    var email =
+      setName("#email", "email") ||
+      setName('input[type="email"]', "email");
+    var message =
+      setName("#message", "message") ||
+      setName("textarea", "message");
+
+    // Honeypot + subject are useful for delivery and filtering.
+    if (!form.querySelector('[name="_gotcha"]')) {
+      var honeypot = document.createElement("input");
+      honeypot.type = "text";
+      honeypot.name = "_gotcha";
+      honeypot.style.display = "none";
+      form.appendChild(honeypot);
+    }
+
+    if (!form.querySelector('[name="_subject"]')) {
+      var subject = document.createElement("input");
+      subject.type = "hidden";
+      subject.name = "_subject";
+      subject.value = "Contact Form - ArgusCX";
+      form.appendChild(subject);
+    }
+
+    // Formspree recognizes _replyto for reply-to behavior.
+    if (email && email.value && !form.querySelector('[name="_replyto"]')) {
+      var replyTo = document.createElement("input");
+      replyTo.type = "hidden";
+      replyTo.name = "_replyto";
+      replyTo.value = email.value;
+      form.appendChild(replyTo);
+    }
+  }
+
+  function bind() {
+    var form = document.querySelector("form");
+    if (!form) return false;
+    if (form.dataset.formspreeBound === "1") return true;
+    form.dataset.formspreeBound = "1";
+
+    form.addEventListener(
+      "submit",
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var submitBtn = form.querySelector('[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        ensureFormFields(form);
+        var fd = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: fd,
+          headers: { Accept: "application/json" },
+        })
+          .then(function (res) {
+            if (!res.ok) throw new Error("Formspree error");
+            // Keep it simple: reload to top and show a basic confirmation.
+            alert("Thanks! Your message has been sent.");
+            form.reset();
+          })
+          .catch(function () {
+            alert("Sorry — something went wrong sending your message. Please try again.");
+          })
+          .finally(function () {
+            if (submitBtn) submitBtn.disabled = false;
+          });
+      },
+      true
+    );
+
+    return true;
+  }
+
+  if (bind()) return;
+  var root = document.getElementById("root");
+  if (root) {
+    var mo = new MutationObserver(function () {
+      if (bind()) mo.disconnect();
+    });
+    mo.observe(root, { childList: true, subtree: true });
+    setTimeout(function () { mo.disconnect(); }, 10000);
+  }
+})();
+</script>
+    <script>
+(function () {
+  function scrollTopNow() {
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("pageshow", scrollTopNow);
+
+  var _pushState = history.pushState;
+  history.pushState = function () {
+    var r = _pushState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  var _replaceState = history.replaceState;
+  history.replaceState = function () {
+    var r = _replaceState.apply(this, arguments);
+    scrollTopNow();
+    return r;
+  };
+
+  window.addEventListener("popstate", scrollTopNow);
+})();
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-loaded');
+
+  const root = document.getElementById('root');
+  if (!root) return;
+
+  // Exclude nav/footer and the actual hero wrapper(s).
+  // Using closest() avoids timing issues during the first React render.
+  const isExcluded = (el) =>
+    !!el.closest('nav, footer, .hero-grid, .hero-glow, .hero-dots, .hero-subtle, .hero-section');
+
+  function ensureReveal(el, delayClass) {
+    if (!el || el.nodeType !== 1) return;
+    if (isExcluded(el)) return;
+    if (el.classList.contains('reveal')) return;
+    el.classList.add('reveal');
+    if (delayClass) el.classList.add(delayClass);
+  }
+
+  function tagEligible() {
+    root.querySelectorAll('h2, h3, blockquote').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section p, section ul, section ol').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('article, [class*="rounded-xl"], [class*="rounded-2xl"], [class*="rounded-lg"][class*="border"]').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section img, section svg').forEach((el) => ensureReveal(el));
+    root.querySelectorAll('section a, section button').forEach((el) => ensureReveal(el));
+
+    root.querySelectorAll('[class*="grid"]').forEach((grid) => {
+      if (isExcluded(grid)) return;
+      const kids = Array.from(grid.children).filter((k) => {
+        if (!k || k.nodeType !== 1) return false;
+        const cls = (k.getAttribute('class') || '');
+        return cls.includes('rounded') || cls.includes('border') || !!k.querySelector('[class*="rounded"]');
+      });
+      kids.slice(0, 4).forEach((card, idx) => {
+        const delay = idx === 0 ? null : `reveal-delay-${idx}`;
+        ensureReveal(card, delay);
+      });
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+
+  function observeReveals() {
+    root.querySelectorAll('.reveal').forEach((el) => {
+      if (el.dataset.revealObserved === '1') return;
+      el.dataset.revealObserved = '1';
+      observer.observe(el);
+    });
+  }
+
+  tagEligible();
+  observeReveals();
+
+  new MutationObserver(() => {
+    tagEligible();
+    observeReveals();
+  }).observe(root, { childList: true, subtree: true });
+});
+    </script>
+    <script>
+(function () {
+  var RELOAD_ROUTES = [
+    "/",
+    "/services",
+    "/about",
+    "/technology",
+    "/industries",
+    "/why",
+    "/why-argus",
+    "/contact",
+    "/get-started",
+    "/careers",
+    "/privacy",
+    "/terms",
+    "/thank-you",
+    "/experience-blue",
+    "/experience-red"
+  ];
+
+  function normalizePath(href) {
+    if (!href) return "";
+    var h = href.split("#")[0].split("?")[0];
+    h = h.replace(/\.html$/i, "");
+    h = h.replace(/\/+$/g, "");
+    return h === "" ? "/" : h;
+  }
+
+  function shouldForceFullReload(href) {
+    if (!href) return false;
+    var h = href.trim();
+    if (!h || h[0] === "#") return false;
+
+    // Ignore external links (http:, mailto:, etc.)
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(h)) return false;
+
+    // Support relative paths like "services.html"
+    if (h[0] !== "/") h = "/" + h;
+
+    var path = normalizePath(h);
+    return RELOAD_ROUTES.indexOf(path) !== -1;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      var target = e.target;
+      if (!target || !target.closest) return;
+
+      var a = target.closest("a[href]");
+      if (!a) return;
+
+      var href = a.getAttribute("href");
+      if (!shouldForceFullReload(href)) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = href;
+    },
+    true
+  );
+})();
+</script>
+  </body>
+</html>
