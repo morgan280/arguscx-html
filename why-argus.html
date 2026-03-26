@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6GGWYP4M5B"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6GGWYP4M5B');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Why Argus | ArgusCX</title>
@@ -495,5 +503,187 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 })();
 </script>
+    <script>
+(function () {
+  var replacements = [
+    {
+      matchIncludes: "Human-Agent Teaming That Actually Delivers",
+      replace: "Operations That Think, Not Just Execute"
+    },
+    {
+      matchIncludes: "We turn operations into outcomes",
+      replace: "Most BPO's stop when the manual ends. ArgusCX teams are trained to identify patterns, flag data drift and refine your logic, turning your partnered operation into a continuous improvement engine."
+    },
+    {
+      matchIncludes: "We're not just a vendor. We're your partner in building CX that customers remember and operations that scale.",
+      replace: "Stop Managing Vendors, Start building with a partner"
+    },
+    {
+      match: "Our mission is to make best-in-class customer experience and back-office support achievable for every business-through a culture of clarity, accountability, and continuous improvement.",
+      replace: "ArgusCX delivers the human intuition your customer experience needs to drive successful outcomes and the operational infrastructure to scale it without friction."
+    },
+    {
+      match: "What We Stand For",
+      replace: "How We Work"
+    },
+    {
+      match: "Clarity",
+      replace: "Transparency"
+    },
+    {
+      match: "Clear goals, clear metrics, and clear communication so nothing gets lost in translation.",
+      replace: "No metric games, no hidden attrition. You always know exactly where things stand."
+    },
+    {
+      match: "Accountability",
+      replace: "Ownership"
+    },
+    {
+      match: "We own outcomes. When we say it's done, it's done-and we back it with data.",
+      replace: "We own outcomes, not activity. If something is broken, we say so and fix it."
+    },
+    {
+      match: "Improvement",
+      replace: "Adaptability"
+    },
+    {
+      match: "We iterate every day. Better processes, better training, better results-continuously.",
+      replace: "When your business shifts, we move with you, no rebuilding from scratch."
+    },
+    {
+      match: "Innovation You Can Measure",
+      replace: "Where AI Stops, Our People Start"
+    },
+    {
+      matchIncludes: "talk about ai and automation",
+      replace: "Most operations automate first and ask questions later. We do it the other way around. Every workflow at ArgusCX is designed with a clear line between what the technology owns and what humans must. AI handles the routine, the pattern recognition and the monitoring. Our people handle the judgement calls, the sensitive conversations and the decisions that carry real consequences. That is how we work and it is what makes the difference between an operation that scales and holds up."
+    },
+    {
+      match: "Why Partner With",
+      replace: "Why Partner With ArgusCX"
+    },
+    {
+      matchIncludes: "scale up or down as demand changes",
+      replace: "Flexibility without the fine print. Scale up or down as demand changes. No long-term lock-in, no overstaffing, no penalties for growing on your own terms."
+    },
+    {
+      matchIncludes: "proven experience standing up and running operations across regions",
+      replace: "Built to hit the ground running. We have proven experience standing up and running operations across regions, languages and work types, from day one, not month six."
+    },
+    {
+      matchIncludes: "advisory and execution in one place",
+      replace: "One Partner, full accountability. Advisory and execution under one roof. We design the process, deploy the technology and deliver the outcome."
+    },
+    {
+      matchIncludes: "relentless focus on quality",
+      replace: "Quality you can see. Auditable, measurable and tied to your KPI's, not our internal metrics, if it doesn't show up in the numbers it doesn't count."
+    },
+    {
+      matchIncludes: "seamless cx across channels and languages",
+      replace: "Your brand, consistent everywhere. Seamless CX across every channel and language so your customers get the same experience regardless of how they reach you."
+    },
+    {
+      matchIncludes: "better unit economics and operational efficiency",
+      replace: "Efficiency that funds growth. Better unit economics means you stop spending on support and start investing in what moves the business forward."
+    },
+    {
+      match: "Focus on excellence",
+      replace: "Judgement where it counts"
+    },
+    {
+      match: "We push ourselves to improve every day so you can focus on what matters: growing your business and serving your customers.",
+      replace: "Our teams are trained to identify patterns, flag issues and make the calls automation can't."
+    },
+    {
+      match: "Human and close",
+      replace: "Human by Design"
+    },
+    {
+      match: "A real person on the other end of the line still matters. Our teams are trained to listen, empathize, and resolve-so every customer feels heard.",
+      replace: "Every workflow has a human checkpoint built in, not as a fallback, but as a feature."
+    },
+    {
+      match: "Modern technology",
+      replace: "Technology that earns its place"
+    },
+    {
+      match: "We use proven tools and integrations so you get fast, secure, high-quality service-without the cost of building it yourself.",
+      replace: "We deploy AI where it improves outcomes and keep humans where it doesn't. No automation for automation's sake."
+    },
+    {
+      match: "The first virtual assistant service where AI and humans work together-superior speed, accuracy, and judgment.",
+      replace: "AI native efficiency paired with human expertise, so your operations scale without losing the judgement and accountability complex work demands."
+    }
+  ];
+
+  function normalize(text) {
+    return (text || "")
+      .replace(/[’]/g, "'")
+      .replace(/[—–]/g, "-")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+  }
+
+  function applyToNode(node) {
+    if (!node || node.nodeType !== 1) return false;
+    var current = normalize(node.textContent);
+    if (!current) return false;
+
+    for (var i = 0; i < replacements.length; i++) {
+      var rule = replacements[i];
+      var match = rule.match ? normalize(rule.match) : null;
+      var matched = false;
+
+      if (match && current === match) matched = true;
+      if (!matched && rule.matchIncludes && current.indexOf(normalize(rule.matchIncludes)) !== -1) matched = true;
+
+      if (matched) {
+        if (node.textContent === rule.replace) return false;
+        node.textContent = rule.replace;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function applyAll() {
+    var root = document.getElementById("root");
+    if (!root) return;
+    var nodes = root.querySelectorAll("h1, h2, h3, p, li, blockquote, span, a");
+    for (var i = 0; i < nodes.length; i++) {
+      applyToNode(nodes[i]);
+    }
+
+    // Force exact casing for this heading in case upstream text varies.
+    var headings = root.querySelectorAll("h1, h2, h3");
+    for (var j = 0; j < headings.length; j++) {
+      var headingText = normalize(headings[j].textContent);
+      if (headingText === "why partner with arguscx" && headings[j].textContent !== "Why Partner With ArgusCX") {
+        headings[j].textContent = "Why Partner With ArgusCX";
+      }
+    }
+  }
+
+  function start() {
+    applyAll();
+    var root = document.getElementById("root");
+    if (!root) return;
+
+    // Run a few delayed passes to catch async React renders
+    // without keeping a long-lived mutation loop active.
+    var attempts = 0;
+    var maxAttempts = 20;
+    var timer = setInterval(function () {
+      applyAll();
+      attempts += 1;
+      if (attempts >= maxAttempts) clearInterval(timer);
+    }, 250);
+  }
+
+  document.addEventListener("DOMContentLoaded", start);
+  window.addEventListener("load", applyAll);
+})();
+    </script>
   </body>
 </html>
